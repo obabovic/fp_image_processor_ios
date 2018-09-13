@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import SwiftyJSON
+
+class MColor: APIEntity, Codable {
+   var r: Float?
+   var g: Float?
+   var b: Float?
+   var a: Float?
+   
+   required init(fromJSON json: JSON) {
+      r = json[Key.r].float
+      g = json[Key.g].float
+      b = json[Key.b].float
+      a = json[Key.a].float
+   }
+}

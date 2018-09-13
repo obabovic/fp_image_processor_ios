@@ -14,6 +14,7 @@ class Rectangle: APIEntity, Codable {
    var end: Position?
    
    required init(fromJSON json: JSON) {
-      
+      start = Position(fromJSON: json[Key.start])
+      end = Position(fromJSON: json[Key.end])
    }
 }

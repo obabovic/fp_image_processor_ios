@@ -13,6 +13,11 @@ class Layer: APIEntity, Codable {
    var selections: [Selection]?
    
    required init(fromJSON json: JSON) {
-      
+      if let arr = json[Key.selections].array {
+         selections = []
+         for jsonSelection in arr {
+            selections?.append(Selection(fromJSON: jsonSelection))
+         }
+      }
    }
 }

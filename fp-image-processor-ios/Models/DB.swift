@@ -13,6 +13,11 @@ class DB: APIEntity, Codable {
    var layers: [Layer]?
    
    required init(fromJSON json: JSON) {
-      
+      if let arr = json[Key.layers].array {
+         layers = []
+         for jsonLayer in arr {
+            layers?.append(Layer(fromJSON: jsonLayer))
+         }
+      }
    }
 }

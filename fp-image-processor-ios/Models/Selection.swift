@@ -13,6 +13,11 @@ class Selection: APIEntity, Codable {
    var rectangles: [Rectangle]?
    
    required init(fromJSON json: JSON) {
-      
+      if let arr = json[Key.rectangles].array {
+         rectangles = []
+         for jsonRectangle in arr {
+            rectangles?.append(Rectangle(fromJSON: jsonRectangle))
+         }
+      }
    }
 }
