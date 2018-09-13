@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4539FF3E214AB5A50001F00F /* APIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539FF3D214AB5A50001F00F /* APIEntity.swift */; };
 		453D73F2214AADFB00D2E813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D73F1214AADFB00D2E813 /* AppDelegate.swift */; };
-		453D73F4214AADFB00D2E813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D73F3214AADFB00D2E813 /* ViewController.swift */; };
 		453D73F7214AADFB00D2E813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453D73F5214AADFB00D2E813 /* Main.storyboard */; };
 		453D73F9214AADFC00D2E813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453D73F8214AADFC00D2E813 /* Assets.xcassets */; };
 		453D73FC214AADFC00D2E813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453D73FA214AADFC00D2E813 /* LaunchScreen.storyboard */; };
+		453D7405214AB22B00D2E813 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D7404214AB22B00D2E813 /* DB.swift */; };
+		453D7407214AB23100D2E813 /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D7406214AB23100D2E813 /* Layer.swift */; };
+		453D7409214AB23700D2E813 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D7408214AB23700D2E813 /* Selection.swift */; };
+		453D740B214AB23C00D2E813 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D740A214AB23C00D2E813 /* Rectangle.swift */; };
+		453D740D214AB24200D2E813 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D740C214AB24200D2E813 /* Position.swift */; };
+		453D740F214AB24800D2E813 /* MColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D740E214AB24800D2E813 /* MColor.swift */; };
+		453D7412214AB2D700D2E813 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D7411214AB2D700D2E813 /* Key.swift */; };
+		C651F6FAF3F7719B282D8AEA /* Pods_fp_image_processor_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697EA52304E5FB81E2E0EB78 /* Pods_fp_image_processor_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4539FF3D214AB5A50001F00F /* APIEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEntity.swift; sourceTree = "<group>"; };
 		453D73EE214AADFB00D2E813 /* fp-image-processor-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fp-image-processor-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		453D73F1214AADFB00D2E813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		453D73F3214AADFB00D2E813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		453D73F6214AADFB00D2E813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		453D73F8214AADFC00D2E813 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		453D73FB214AADFC00D2E813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		453D73FD214AADFC00D2E813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		453D7404214AB22B00D2E813 /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
+		453D7406214AB23100D2E813 /* Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
+		453D7408214AB23700D2E813 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
+		453D740A214AB23C00D2E813 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		453D740C214AB24200D2E813 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		453D740E214AB24800D2E813 /* MColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MColor.swift; sourceTree = "<group>"; };
+		453D7411214AB2D700D2E813 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		697EA52304E5FB81E2E0EB78 /* Pods_fp_image_processor_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fp_image_processor_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		927EEA94A8C4913BC670526F /* Pods-fp-image-processor-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fp-image-processor-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-fp-image-processor-ios/Pods-fp-image-processor-ios.release.xcconfig"; sourceTree = "<group>"; };
+		B434BDF22105BF8F078551D9 /* Pods-fp-image-processor-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fp-image-processor-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fp-image-processor-ios/Pods-fp-image-processor-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C651F6FAF3F7719B282D8AEA /* Pods_fp_image_processor_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +59,8 @@
 			children = (
 				453D73F0214AADFB00D2E813 /* fp-image-processor-ios */,
 				453D73EF214AADFB00D2E813 /* Products */,
+				490AEA1A2C5D567F899392F1 /* Pods */,
+				A3415BE08459B90CC1A81E1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +75,62 @@
 		453D73F0214AADFB00D2E813 /* fp-image-processor-ios */ = {
 			isa = PBXGroup;
 			children = (
+				453D7417214AB44300D2E813 /* Controllers */,
+				453D7410214AB2CA00D2E813 /* Utils */,
+				453D7403214AB20B00D2E813 /* Models */,
 				453D73F1214AADFB00D2E813 /* AppDelegate.swift */,
-				453D73F3214AADFB00D2E813 /* ViewController.swift */,
 				453D73F5214AADFB00D2E813 /* Main.storyboard */,
 				453D73F8214AADFC00D2E813 /* Assets.xcassets */,
 				453D73FA214AADFC00D2E813 /* LaunchScreen.storyboard */,
 				453D73FD214AADFC00D2E813 /* Info.plist */,
 			);
 			path = "fp-image-processor-ios";
+			sourceTree = "<group>";
+		};
+		453D7403214AB20B00D2E813 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				453D7404214AB22B00D2E813 /* DB.swift */,
+				453D7406214AB23100D2E813 /* Layer.swift */,
+				453D7408214AB23700D2E813 /* Selection.swift */,
+				453D740A214AB23C00D2E813 /* Rectangle.swift */,
+				453D740C214AB24200D2E813 /* Position.swift */,
+				453D740E214AB24800D2E813 /* MColor.swift */,
+				4539FF3D214AB5A50001F00F /* APIEntity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		453D7410214AB2CA00D2E813 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				453D7411214AB2D700D2E813 /* Key.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		453D7417214AB44300D2E813 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		490AEA1A2C5D567F899392F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B434BDF22105BF8F078551D9 /* Pods-fp-image-processor-ios.debug.xcconfig */,
+				927EEA94A8C4913BC670526F /* Pods-fp-image-processor-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A3415BE08459B90CC1A81E1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				697EA52304E5FB81E2E0EB78 /* Pods_fp_image_processor_ios.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 453D7400214AADFC00D2E813 /* Build configuration list for PBXNativeTarget "fp-image-processor-ios" */;
 			buildPhases = (
+				BC5B264ADE4870EFD5A1DC57 /* [CP] Check Pods Manifest.lock */,
 				453D73EA214AADFB00D2E813 /* Sources */,
 				453D73EB214AADFB00D2E813 /* Frameworks */,
 				453D73EC214AADFB00D2E813 /* Resources */,
+				91AAFA188CE33EA9DB01A6F9 /* [CP] Embed Pods Frameworks */,
+				5AE1728690F0C6818AB879D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,13 +202,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5AE1728690F0C6818AB879D8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fp-image-processor-ios/Pods-fp-image-processor-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91AAFA188CE33EA9DB01A6F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-fp-image-processor-ios/Pods-fp-image-processor-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fp-image-processor-ios/Pods-fp-image-processor-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC5B264ADE4870EFD5A1DC57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fp-image-processor-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		453D73EA214AADFB00D2E813 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				453D73F4214AADFB00D2E813 /* ViewController.swift in Sources */,
+				453D740D214AB24200D2E813 /* Position.swift in Sources */,
+				453D7412214AB2D700D2E813 /* Key.swift in Sources */,
+				453D7409214AB23700D2E813 /* Selection.swift in Sources */,
+				4539FF3E214AB5A50001F00F /* APIEntity.swift in Sources */,
+				453D740F214AB24800D2E813 /* MColor.swift in Sources */,
 				453D73F2214AADFB00D2E813 /* AppDelegate.swift in Sources */,
+				453D740B214AB23C00D2E813 /* Rectangle.swift in Sources */,
+				453D7405214AB22B00D2E813 /* DB.swift in Sources */,
+				453D7407214AB23100D2E813 /* Layer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +421,7 @@
 		};
 		453D7401214AADFC00D2E813 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B434BDF22105BF8F078551D9 /* Pods-fp-image-processor-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +440,7 @@
 		};
 		453D7402214AADFC00D2E813 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 927EEA94A8C4913BC670526F /* Pods-fp-image-processor-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
