@@ -22,6 +22,15 @@ struct Key {
    static let g = "g"
    static let b = "b"
    static let a = "a"
+   static let name = "name"
+   static let mc = "mc"
+   static let active = "active"
+   static let alpha = "alpha"
+   static let imagePath = "imagePath"
+   static let id = "id"
+   static let w = "w"
+   static let h = "h"
+   static let pMat = "pMat"
    
    struct Operation {
       static let add = "add"
@@ -31,6 +40,7 @@ struct Key {
       static let div = "div"
       static let invdiv = "invdiv"
       static let inv = "inv"
+      static let greyscale = "greyscale"
       static let pow = "pow"
       static let log = "log"
       static let mediana = "mediana"

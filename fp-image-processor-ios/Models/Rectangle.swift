@@ -17,4 +17,13 @@ class Rectangle: APIEntity, Codable {
       start = Position(fromJSON: json[Key.start])
       end = Position(fromJSON: json[Key.end])
    }
+   
+   func toJSON() -> [String : Any] {
+      var json: [String: Any] = [:]
+      
+      json[Key.start] = start?.toJSON()
+      json[Key.end] = end?.toJSON()
+      
+      return json
+   }
 }

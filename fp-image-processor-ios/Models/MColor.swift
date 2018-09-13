@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class MColor: APIEntity, Codable {
+class MColor: APIEntity {
    var r: Float?
    var g: Float?
    var b: Float?
@@ -20,5 +20,16 @@ class MColor: APIEntity, Codable {
       g = json[Key.g].float
       b = json[Key.b].float
       a = json[Key.a].float
+   }
+   
+   func toJSON() -> [String : Any] {
+      var json: [String: Any] = [:]
+      
+      json[Key.r] = r
+      json[Key.g] = g
+      json[Key.b] = b
+      json[Key.a] = a
+      
+      return json
    }
 }

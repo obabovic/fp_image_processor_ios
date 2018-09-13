@@ -17,4 +17,13 @@ class Position: APIEntity, Codable {
       x = json[Key.x].int
       y = json[Key.y].int
    }
+   
+   func toJSON() -> [String : Any] {
+      var json: [String: Any] = [:]
+      
+      json[Key.x] = x
+      json[Key.y] = y
+      
+      return json
+   }
 }

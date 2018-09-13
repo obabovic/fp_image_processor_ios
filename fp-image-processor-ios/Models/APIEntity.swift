@@ -11,4 +11,5 @@ import SwiftyJSON
 
 protocol APIEntity {
    init(fromJSON json: JSON)
+   func toJSON() -> [String: Any]
 }
