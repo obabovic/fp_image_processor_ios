@@ -23,7 +23,7 @@ class RectangleCreateViewController: UIViewController {
       super.viewDidLoad()
       
       // Setup pickoption
-      DB.shared.layers?.forEach({ (layer) in
+      DB.shared.layers.forEach({ (layer) in
          if let selections = layer.selections {
             self.pickOptions.append(contentsOf: selections)
          }

@@ -15,7 +15,7 @@ class SelectionCreateViewController: UIViewController {
    @IBOutlet weak var switchActive: UISwitch!
    @IBOutlet weak var btnSubmit: UIButton!
    
-   var pickOptions: [Layer]! = DB.shared.layers ?? []
+   var pickOptions: [Layer]! = DB.shared.layers
    var selectedLayer: Layer?
    
    var selectedOperations: [Operation] = []
@@ -23,6 +23,7 @@ class SelectionCreateViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       
+      txtOperations.delegate = self
       
       // Setup layers
       let pickerView = UIPickerView()
@@ -71,6 +72,20 @@ class SelectionCreateViewController: UIViewController {
          navigationController?.popViewController(animated: true)
       }
    }
+   
+   // MARK: - Navigation
+   
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if segue.identifier == Segue.presentOperations {
+         let vc = segue.destination as! OperationsModalViewController
+         
+         vc.delegate = self
+         definesPresentationContext = true
+         vc.providesPresentationContextTransitionStyle = true
+         vc.modalPresentationStyle = .overFullScreen
+         vc.modalTransitionStyle = .crossDissolve
+      }
+   }
 }
 
 
@@ -97,5 +112,27 @@ extension SelectionCreateViewController: UIPickerViewDataSource {
    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
       selectedLayer = pickOptions[row]
       txtLayer.text = String(describing: pickOptions[row].id)
+   }
+}
+
+
+// MARK: - UITextFieldDelegate
+
+extension SelectionCreateViewController: UITextFieldDelegate {
+   func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+      performSegue(withIdentifier: Segue.presentOperations, sender: self)
+      return false
+   }
+}
+
+
+// MARK: - OperationsModalViewControllerDelegate
+
+extension SelectionCreateViewController: OperationsModalViewControllerDelegate {
+   func operationsModalViewControllerWillFinish(operations: [Operation]) {
+      selectedOperations = operations
+      for operation in selectedOperations {
+         txtOperations.text?.append(operation.name!)
+      }
    }
 }

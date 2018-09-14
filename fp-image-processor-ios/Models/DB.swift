@@ -12,14 +12,14 @@ import SwiftyJSON
 class DB: APIEntity {
    static var shared: DB = DB()
    
-   var layers: [Layer]?
-   var operations: [Operation]?
+   var layers: [Layer] = []
+   var operations: [Operation] = []
    var w: Int?
    var h: Int?
    
    // MARK: - Singleton
    
-   private init() { layers = []; operations = []; w = 1000; h = 1000}
+   private init() { w = 1000; h = 1000}
    
    class func initFromJSON(fromJSON json: JSON) {
       shared = DB(fromJSON: json)
@@ -34,7 +34,7 @@ class DB: APIEntity {
       if let arr = json[Key.layers].array {
          layers = []
          for jsonLayer in arr {
-            layers?.append(Layer(fromJSON: jsonLayer))
+            layers.append(Layer(fromJSON: jsonLayer))
          }
       }
    }
@@ -42,7 +42,7 @@ class DB: APIEntity {
    func toJSON() -> [String : Any] {
       var json: [String: Any] = [:]
       
-      if let layers = layers {
+      if layers.count > 0 {
          json[Key.layers] = JSONHelper.toJsonArray(fromArray: layers)
       }
       

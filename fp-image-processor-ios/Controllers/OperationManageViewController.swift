@@ -1,5 +1,5 @@
 //
-//  OperationsViewController.swift
+//  OperationManageViewController.swift
 //  fp-image-processor-ios
 //
 //  Created by Ognjen Babovic on 9/14/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OperationsViewController: UIViewController {
+class OperationManageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -34,13 +34,14 @@
 		4591E846214B9E2900951C08 /* SelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4591E844214B9E2900951C08 /* SelectionTableViewCell.xib */; };
 		4591E84E214BC5B500951C08 /* SelectionManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E84D214BC5B500951C08 /* SelectionManageViewController.swift */; };
 		4591E850214BC5CD00951C08 /* RectangleManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E84F214BC5CD00951C08 /* RectangleManageViewController.swift */; };
-		4591E852214BC5D800951C08 /* OperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E851214BC5D800951C08 /* OperationsViewController.swift */; };
+		4591E852214BC5D800951C08 /* OperationsModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E851214BC5D800951C08 /* OperationsModalViewController.swift */; };
 		4591E854214BC6EB00951C08 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E853214BC6EB00951C08 /* Segue.swift */; };
 		4591E856214BCA9000951C08 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E855214BCA9000951C08 /* UITableViewCell.swift */; };
 		4591E859214BCB0600951C08 /* OperationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E857214BCB0600951C08 /* OperationTableViewCell.swift */; };
 		4591E85A214BCB0600951C08 /* OperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4591E858214BCB0600951C08 /* OperationTableViewCell.xib */; };
 		4591E85D214BCB2400951C08 /* RectangleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E85B214BCB2400951C08 /* RectangleTableViewCell.swift */; };
 		4591E85E214BCB2400951C08 /* RectangleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4591E85C214BCB2400951C08 /* RectangleTableViewCell.xib */; };
+		4591E860214BED7000951C08 /* OperationManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E85F214BED7000951C08 /* OperationManageViewController.swift */; };
 		C651F6FAF3F7719B282D8AEA /* Pods_fp_image_processor_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697EA52304E5FB81E2E0EB78 /* Pods_fp_image_processor_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,13 +75,14 @@
 		4591E844214B9E2900951C08 /* SelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionTableViewCell.xib; sourceTree = "<group>"; };
 		4591E84D214BC5B500951C08 /* SelectionManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionManageViewController.swift; sourceTree = "<group>"; };
 		4591E84F214BC5CD00951C08 /* RectangleManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleManageViewController.swift; sourceTree = "<group>"; };
-		4591E851214BC5D800951C08 /* OperationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsViewController.swift; sourceTree = "<group>"; };
+		4591E851214BC5D800951C08 /* OperationsModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsModalViewController.swift; sourceTree = "<group>"; };
 		4591E853214BC6EB00951C08 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		4591E855214BCA9000951C08 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		4591E857214BCB0600951C08 /* OperationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationTableViewCell.swift; sourceTree = "<group>"; };
 		4591E858214BCB0600951C08 /* OperationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationTableViewCell.xib; sourceTree = "<group>"; };
 		4591E85B214BCB2400951C08 /* RectangleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleTableViewCell.swift; sourceTree = "<group>"; };
 		4591E85C214BCB2400951C08 /* RectangleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RectangleTableViewCell.xib; sourceTree = "<group>"; };
+		4591E85F214BED7000951C08 /* OperationManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationManageViewController.swift; sourceTree = "<group>"; };
 		697EA52304E5FB81E2E0EB78 /* Pods_fp_image_processor_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fp_image_processor_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		927EEA94A8C4913BC670526F /* Pods-fp-image-processor-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fp-image-processor-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-fp-image-processor-ios/Pods-fp-image-processor-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B434BDF22105BF8F078551D9 /* Pods-fp-image-processor-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fp-image-processor-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fp-image-processor-ios/Pods-fp-image-processor-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,7 +180,8 @@
 				4591E83A214B9CF600951C08 /* OperationCreateViewController.swift */,
 				4591E84D214BC5B500951C08 /* SelectionManageViewController.swift */,
 				4591E84F214BC5CD00951C08 /* RectangleManageViewController.swift */,
-				4591E851214BC5D800951C08 /* OperationsViewController.swift */,
+				4591E851214BC5D800951C08 /* OperationsModalViewController.swift */,
+				4591E85F214BED7000951C08 /* OperationManageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -368,10 +371,11 @@
 				4591E82D214B945900951C08 /* LayerCreateViewController.swift in Sources */,
 				4591E841214B9E2000951C08 /* LayerTableViewCell.swift in Sources */,
 				4591E850214BC5CD00951C08 /* RectangleManageViewController.swift in Sources */,
+				4591E860214BED7000951C08 /* OperationManageViewController.swift in Sources */,
 				4539FF4B214ACA280001F00F /* MainViewController.swift in Sources */,
 				4591E833214B965600951C08 /* RectangleCreateViewController.swift in Sources */,
 				4539FF45214ABC1E0001F00F /* Operation.swift in Sources */,
-				4591E852214BC5D800951C08 /* OperationsViewController.swift in Sources */,
+				4591E852214BC5D800951C08 /* OperationsModalViewController.swift in Sources */,
 				4539FF3E214AB5A50001F00F /* APIEntity.swift in Sources */,
 				453D740F214AB24800D2E813 /* MColor.swift in Sources */,
 				453D73F2214AADFB00D2E813 /* AppDelegate.swift in Sources */,

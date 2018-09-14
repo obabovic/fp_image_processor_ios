@@ -15,6 +15,13 @@ class MColor: APIEntity {
    var b: Float?
    var a: Float?
    
+   init(r: Float, g: Float, b: Float) {
+      self.r = r
+      self.g = g
+      self.b = b
+      self.a = 1.0
+   }
+   
    required init(fromJSON json: JSON) {
       r = json[Key.r].float
       g = json[Key.g].float

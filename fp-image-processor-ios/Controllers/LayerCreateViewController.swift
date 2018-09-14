@@ -58,7 +58,7 @@ class LayerCreateViewController: UIViewController {
       if let id = txtId.text,
          let imagePath = txtImageName.text,
          let alpha = txtAlpha.text {
-         DB.shared.layers?.append(Layer(id: Int(id), imagePath: imagePath, alpha: Float(alpha), active: switchIsActive.isOn))
+         DB.shared.layers.append(Layer(id: Int(id), imagePath: imagePath, alpha: Float(alpha), active: switchIsActive.isOn))
          
          navigationController?.popViewController(animated: true)
       }

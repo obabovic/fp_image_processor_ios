@@ -17,6 +17,8 @@ class Operation: APIEntity {
    var pMat: [[MColor]]?
    var ops: [Operation]?
    
+   init() {}
+   
    required init(fromJSON json: JSON) {
       name = json[Key.name].string
    }

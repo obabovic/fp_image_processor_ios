@@ -18,4 +18,5 @@ struct Segue {
    static let showRectangleCreate = "showRectangleCreate"
    static let showOperationCreate = "showOperationCreate"
    static let showResult = "showResult"
+   static let presentOperations = "presentOperations"
 }
