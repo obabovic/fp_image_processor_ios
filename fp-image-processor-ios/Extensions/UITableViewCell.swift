@@ -1,5 +1,5 @@
 //
-//  LayersViewController.swift
+//  UITableViewCell.swift
 //  fp-image-processor-ios
 //
 //  Created by Ognjen Babovic on 9/14/18.
@@ -8,10 +8,6 @@
 
 import UIKit
 
-class LayersViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+extension UITableViewCell {
+   static let identifier = String(describing: self)
 }

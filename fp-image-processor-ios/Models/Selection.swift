@@ -15,6 +15,12 @@ class Selection: APIEntity {
    var ops: [Operation]?
    var active: Bool?
    
+   init(name: String, ops: [Operation], active: Bool) {
+      self.name = name
+      self.ops = ops
+      self.active = active
+   }
+   
    required init(fromJSON json: JSON) {
       name = json[Key.name].string
       active = json[Key.active].bool

@@ -13,6 +13,11 @@ class Position: APIEntity, Codable {
    var x: Int?
    var y: Int?
 
+   init(x: Int, y: Int) {
+      self.x = x
+      self.y = y
+   }
+   
    required init(fromJSON json: JSON) {
       x = json[Key.x].int
       y = json[Key.y].int

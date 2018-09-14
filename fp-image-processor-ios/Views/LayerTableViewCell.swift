@@ -9,16 +9,22 @@
 import UIKit
 
 class LayerTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+   var content: Layer? {
+      didSet {
+         setup()
+      }
+   }
+   
+   
+   // MARK: - Setup
+   
+   func reset() {
+      
+   }
+   
+   func setup() {
+      reset()
+      
+      //TODO: Setup
+   }
 }

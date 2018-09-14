@@ -14,8 +14,15 @@ class Layer: APIEntity {
    var imagePath: String?
    var alpha: Float?
    var active: Bool?
-   var selections: [Selection]?
+   var selections: [Selection]? = []
 
+   init(id: Int?, imagePath: String?, alpha: Float?, active: Bool?) {
+      self.id = id
+      self.imagePath = imagePath
+      self.alpha = alpha
+      self.active = active
+   }
+   
    required init(fromJSON json: JSON) {
       id = json[Key.id].int
       imagePath = json[Key.imagePath].string

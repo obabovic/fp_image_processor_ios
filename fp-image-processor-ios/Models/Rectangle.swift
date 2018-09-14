@@ -13,6 +13,11 @@ class Rectangle: APIEntity, Codable {
    var start: Position?
    var end: Position?
    
+   init(start: Position, end: Position) {
+      self.start = start
+      self.end = end
+   }
+   
    required init(fromJSON json: JSON) {
       start = Position(fromJSON: json[Key.start])
       end = Position(fromJSON: json[Key.end])

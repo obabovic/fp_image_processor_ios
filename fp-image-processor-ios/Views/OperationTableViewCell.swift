@@ -1,5 +1,5 @@
 //
-//  RectangleTableViewCell.swift
+//  OperationTableViewCell.swift
 //  fp-image-processor-ios
 //
 //  Created by Ognjen Babovic on 9/14/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RectangleTableViewCell: UITableViewCell {
+class OperationTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
