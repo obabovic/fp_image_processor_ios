@@ -30,6 +30,11 @@
 		4591E837214B9CB100951C08 /* ManageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E836214B9CB100951C08 /* ManageSelectionViewController.swift */; };
 		4591E839214B9CE700951C08 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E838214B9CE700951C08 /* ResultViewController.swift */; };
 		4591E83B214B9CF600951C08 /* OperationCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E83A214B9CF600951C08 /* OperationCreateViewController.swift */; };
+		4591E841214B9E2000951C08 /* LayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E83F214B9E2000951C08 /* LayerTableViewCell.swift */; };
+		4591E842214B9E2000951C08 /* LayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4591E840214B9E2000951C08 /* LayerTableViewCell.xib */; };
+		4591E845214B9E2900951C08 /* SelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E843214B9E2900951C08 /* SelectionTableViewCell.swift */; };
+		4591E846214B9E2900951C08 /* SelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4591E844214B9E2900951C08 /* SelectionTableViewCell.xib */; };
+		4591E848214BB66900951C08 /* RectangleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E847214BB66900951C08 /* RectangleTableViewCell.swift */; };
 		C651F6FAF3F7719B282D8AEA /* Pods_fp_image_processor_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697EA52304E5FB81E2E0EB78 /* Pods_fp_image_processor_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +64,11 @@
 		4591E836214B9CB100951C08 /* ManageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSelectionViewController.swift; sourceTree = "<group>"; };
 		4591E838214B9CE700951C08 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		4591E83A214B9CF600951C08 /* OperationCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCreateViewController.swift; sourceTree = "<group>"; };
+		4591E83F214B9E2000951C08 /* LayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerTableViewCell.swift; sourceTree = "<group>"; };
+		4591E840214B9E2000951C08 /* LayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayerTableViewCell.xib; sourceTree = "<group>"; };
+		4591E843214B9E2900951C08 /* SelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCell.swift; sourceTree = "<group>"; };
+		4591E844214B9E2900951C08 /* SelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionTableViewCell.xib; sourceTree = "<group>"; };
+		4591E847214BB66900951C08 /* RectangleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleTableViewCell.swift; sourceTree = "<group>"; };
 		697EA52304E5FB81E2E0EB78 /* Pods_fp_image_processor_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fp_image_processor_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		927EEA94A8C4913BC670526F /* Pods-fp-image-processor-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fp-image-processor-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-fp-image-processor-ios/Pods-fp-image-processor-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B434BDF22105BF8F078551D9 /* Pods-fp-image-processor-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fp-image-processor-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fp-image-processor-ios/Pods-fp-image-processor-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +114,7 @@
 		453D73F0214AADFB00D2E813 /* fp-image-processor-ios */ = {
 			isa = PBXGroup;
 			children = (
+				4591E83C214B9E0100951C08 /* Views */,
 				4539FF41214ABBD50001F00F /* Extensions */,
 				453D7417214AB44300D2E813 /* Controllers */,
 				453D7410214AB2CA00D2E813 /* Utils */,
@@ -155,6 +166,18 @@
 				4591E83A214B9CF600951C08 /* OperationCreateViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4591E83C214B9E0100951C08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4591E83F214B9E2000951C08 /* LayerTableViewCell.swift */,
+				4591E840214B9E2000951C08 /* LayerTableViewCell.xib */,
+				4591E843214B9E2900951C08 /* SelectionTableViewCell.swift */,
+				4591E844214B9E2900951C08 /* SelectionTableViewCell.xib */,
+				4591E847214BB66900951C08 /* RectangleTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		490AEA1A2C5D567F899392F1 /* Pods */ = {
@@ -236,8 +259,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				453D73FC214AADFC00D2E813 /* LaunchScreen.storyboard in Resources */,
+				4591E846214B9E2900951C08 /* SelectionTableViewCell.xib in Resources */,
 				453D73F9214AADFC00D2E813 /* Assets.xcassets in Resources */,
 				453D73F7214AADFB00D2E813 /* Main.storyboard in Resources */,
+				4591E842214B9E2000951C08 /* LayerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,12 +344,15 @@
 				4591E82F214B946400951C08 /* LayersViewController.swift in Sources */,
 				453D7409214AB23700D2E813 /* Selection.swift in Sources */,
 				4591E82D214B945900951C08 /* LayerCreateViewController.swift in Sources */,
+				4591E841214B9E2000951C08 /* LayerTableViewCell.swift in Sources */,
 				4539FF4B214ACA280001F00F /* MainViewController.swift in Sources */,
 				4591E833214B965600951C08 /* RectangleCreateViewController.swift in Sources */,
 				4539FF45214ABC1E0001F00F /* Operation.swift in Sources */,
 				4539FF3E214AB5A50001F00F /* APIEntity.swift in Sources */,
+				4591E848214BB66900951C08 /* RectangleTableViewCell.swift in Sources */,
 				453D740F214AB24800D2E813 /* MColor.swift in Sources */,
 				453D73F2214AADFB00D2E813 /* AppDelegate.swift in Sources */,
+				4591E845214B9E2900951C08 /* SelectionTableViewCell.swift in Sources */,
 				453D740B214AB23C00D2E813 /* Rectangle.swift in Sources */,
 				4591E837214B9CB100951C08 /* ManageSelectionViewController.swift in Sources */,
 				4591E835214B9C9600951C08 /* ManageLayerViewController.swift in Sources */,

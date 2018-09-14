@@ -8,15 +8,32 @@
 
 import UIKit
 import SwiftyJSON
+import Floaty
 
 class MainViewController: UIViewController {
+   @IBOutlet weak var tableView: UITableView!
    
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      let json = JSON(parseJSON: "{\"width\":1920,\"height\":1080,\"layers\":[{\"id\":1,\"imagePath\":\"qwe.png\",\"alpha\":1,\"active\":true,\"selections\":[{\"name\":\"sel1\",\"active\":true,\"ops\":[{\"name\":\"greyscale\"}],\"rectangles\":[{\"start\":{\"x\":0,\"y\":0},\"end\":{\"x\":700,\"y\":700}}]}]}]}")
+      let floaty = Floaty()
       
-      var db = DB(fromJSON: json)
-      print(db)
+      floaty.addItem(title: "New Layer") { _ in
+         
+      }
+      
+      floaty.addItem(title: "New Selection") { _ in
+         
+      }
+      
+      floaty.addItem(title: "New Rectangle") { _ in
+         
+      }
+      
+      floaty.addItem(title: "New Operation") { _ in
+         
+      }
+      
+      self.view.addSubview(floaty)
    }
 }
