@@ -22,6 +22,14 @@
 		453D740D214AB24200D2E813 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D740C214AB24200D2E813 /* Position.swift */; };
 		453D740F214AB24800D2E813 /* MColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D740E214AB24800D2E813 /* MColor.swift */; };
 		453D7412214AB2D700D2E813 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D7411214AB2D700D2E813 /* Key.swift */; };
+		4591E82D214B945900951C08 /* LayerCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E82C214B945900951C08 /* LayerCreateViewController.swift */; };
+		4591E82F214B946400951C08 /* LayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E82E214B946400951C08 /* LayersViewController.swift */; };
+		4591E831214B962500951C08 /* SelectionCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E830214B962500951C08 /* SelectionCreateViewController.swift */; };
+		4591E833214B965600951C08 /* RectangleCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E832214B965600951C08 /* RectangleCreateViewController.swift */; };
+		4591E835214B9C9600951C08 /* ManageLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E834214B9C9600951C08 /* ManageLayerViewController.swift */; };
+		4591E837214B9CB100951C08 /* ManageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E836214B9CB100951C08 /* ManageSelectionViewController.swift */; };
+		4591E839214B9CE700951C08 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E838214B9CE700951C08 /* ResultViewController.swift */; };
+		4591E83B214B9CF600951C08 /* OperationCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E83A214B9CF600951C08 /* OperationCreateViewController.swift */; };
 		C651F6FAF3F7719B282D8AEA /* Pods_fp_image_processor_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697EA52304E5FB81E2E0EB78 /* Pods_fp_image_processor_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +51,14 @@
 		453D740C214AB24200D2E813 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		453D740E214AB24800D2E813 /* MColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MColor.swift; sourceTree = "<group>"; };
 		453D7411214AB2D700D2E813 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		4591E82C214B945900951C08 /* LayerCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerCreateViewController.swift; sourceTree = "<group>"; };
+		4591E82E214B946400951C08 /* LayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayersViewController.swift; sourceTree = "<group>"; };
+		4591E830214B962500951C08 /* SelectionCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCreateViewController.swift; sourceTree = "<group>"; };
+		4591E832214B965600951C08 /* RectangleCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCreateViewController.swift; sourceTree = "<group>"; };
+		4591E834214B9C9600951C08 /* ManageLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageLayerViewController.swift; sourceTree = "<group>"; };
+		4591E836214B9CB100951C08 /* ManageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSelectionViewController.swift; sourceTree = "<group>"; };
+		4591E838214B9CE700951C08 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		4591E83A214B9CF600951C08 /* OperationCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCreateViewController.swift; sourceTree = "<group>"; };
 		697EA52304E5FB81E2E0EB78 /* Pods_fp_image_processor_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fp_image_processor_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		927EEA94A8C4913BC670526F /* Pods-fp-image-processor-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fp-image-processor-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-fp-image-processor-ios/Pods-fp-image-processor-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B434BDF22105BF8F078551D9 /* Pods-fp-image-processor-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fp-image-processor-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fp-image-processor-ios/Pods-fp-image-processor-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +145,14 @@
 			isa = PBXGroup;
 			children = (
 				4539FF4A214ACA280001F00F /* MainViewController.swift */,
+				4591E82C214B945900951C08 /* LayerCreateViewController.swift */,
+				4591E82E214B946400951C08 /* LayersViewController.swift */,
+				4591E830214B962500951C08 /* SelectionCreateViewController.swift */,
+				4591E832214B965600951C08 /* RectangleCreateViewController.swift */,
+				4591E834214B9C9600951C08 /* ManageLayerViewController.swift */,
+				4591E836214B9CB100951C08 /* ManageSelectionViewController.swift */,
+				4591E838214B9CE700951C08 /* ResultViewController.swift */,
+				4591E83A214B9CF600951C08 /* OperationCreateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -289,16 +313,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				453D740D214AB24200D2E813 /* Position.swift in Sources */,
+				4591E839214B9CE700951C08 /* ResultViewController.swift in Sources */,
+				4591E83B214B9CF600951C08 /* OperationCreateViewController.swift in Sources */,
 				453D7412214AB2D700D2E813 /* Key.swift in Sources */,
+				4591E82F214B946400951C08 /* LayersViewController.swift in Sources */,
 				453D7409214AB23700D2E813 /* Selection.swift in Sources */,
+				4591E82D214B945900951C08 /* LayerCreateViewController.swift in Sources */,
 				4539FF4B214ACA280001F00F /* MainViewController.swift in Sources */,
+				4591E833214B965600951C08 /* RectangleCreateViewController.swift in Sources */,
 				4539FF45214ABC1E0001F00F /* Operation.swift in Sources */,
 				4539FF3E214AB5A50001F00F /* APIEntity.swift in Sources */,
 				453D740F214AB24800D2E813 /* MColor.swift in Sources */,
 				453D73F2214AADFB00D2E813 /* AppDelegate.swift in Sources */,
 				453D740B214AB23C00D2E813 /* Rectangle.swift in Sources */,
+				4591E837214B9CB100951C08 /* ManageSelectionViewController.swift in Sources */,
+				4591E835214B9C9600951C08 /* ManageLayerViewController.swift in Sources */,
 				4539FF49214AC8C80001F00F /* JSONHelper.swift in Sources */,
 				453D7405214AB22B00D2E813 /* DB.swift in Sources */,
+				4591E831214B962500951C08 /* SelectionCreateViewController.swift in Sources */,
 				453D7407214AB23100D2E813 /* Layer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
