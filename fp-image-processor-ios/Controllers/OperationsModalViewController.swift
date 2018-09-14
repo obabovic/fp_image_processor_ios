@@ -26,13 +26,10 @@ class OperationsModalViewController: UIViewController {
       tableView.dataSource = self
       tableView.allowsMultipleSelection = true
       tableView.register(UINib(nibName: String(describing: OperationTableViewCell.self), bundle: nil), forCellReuseIdentifier: OperationTableViewCell.identifier)
-      
-      let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePressed(_:)))
-      navigationItem.leftBarButtonItem = doneButton
    }
    
    
-   @objc func donePressed(_ sender: Any?) {
+   @IBAction func donePressed(_ sender: Any?) {
       defer {
          dismiss(animated: true, completion: nil)
       }

@@ -438,12 +438,21 @@
                                 <rect key="frame" x="37.5" y="76.5" width="300" height="534"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdR-N2-dAC">
+                                <rect key="frame" x="322" y="20" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="donePressed:" destination="m9T-Td-GhJ" eventType="touchUpInside" id="4I7-sS-MrO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HFY-8M-aah" firstAttribute="height" secondItem="0Q2-cO-Ty0" secondAttribute="height" multiplier="0.8" id="B3j-xx-FYG"/>
                             <constraint firstItem="HFY-8M-aah" firstAttribute="centerY" secondItem="0Q2-cO-Ty0" secondAttribute="centerYWithinMargins" id="GsR-oQ-JYd"/>
                             <constraint firstItem="HFY-8M-aah" firstAttribute="centerX" secondItem="0Q2-cO-Ty0" secondAttribute="centerXWithinMargins" id="Pud-75-7Nc"/>
+                            <constraint firstItem="VdR-N2-dAC" firstAttribute="top" secondItem="l2m-bd-Pe4" secondAttribute="top" id="Te3-Fm-q6U"/>
+                            <constraint firstItem="l2m-bd-Pe4" firstAttribute="trailing" secondItem="VdR-N2-dAC" secondAttribute="trailing" constant="16" id="ioV-Rf-nRv"/>
                             <constraint firstItem="HFY-8M-aah" firstAttribute="width" secondItem="0Q2-cO-Ty0" secondAttribute="width" multiplier="0.8" id="zdP-5T-0dO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l2m-bd-Pe4"/>
@@ -698,6 +707,6 @@ Cg
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b5a-wI-2hx"/>
+        <segue reference="XcS-Jd-SQ3"/>
     </inferredMetricsTieBreakers>
 </document>

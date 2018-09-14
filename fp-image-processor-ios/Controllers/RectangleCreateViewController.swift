@@ -29,14 +29,13 @@ class RectangleCreateViewController: UIViewController {
          }
       })
       
-      // Setup layers
-      let pickerView = UIPickerView()
-      
-      pickerView.delegate = self
-      
-      txtSelection.inputView = pickerView
-      txtSelection.text = "\(pickOptions[0].name ?? "")"
-      selectedSelection = pickOptions[0]
+      if pickOptions.count > 0 {
+         let pickerView = UIPickerView()
+         pickerView.delegate = self
+         txtSelection.inputView = pickerView
+         txtSelection.text = "\(pickOptions[0].name ?? "")"
+         selectedSelection = pickOptions[0]
+      }
    }
    
    

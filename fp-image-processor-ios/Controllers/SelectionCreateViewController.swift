@@ -25,14 +25,13 @@ class SelectionCreateViewController: UIViewController {
       
       txtOperations.delegate = self
       
-      // Setup layers
-      let pickerView = UIPickerView()
-      
-      pickerView.delegate = self
-      
-      txtLayer.inputView = pickerView
-      txtLayer.text = "\(pickOptions[0].id ?? 0)"
-      selectedLayer = pickOptions[0]
+      if pickOptions.count > 0 {
+         let pickerView = UIPickerView()
+         pickerView.delegate = self
+         txtLayer.inputView = pickerView
+         txtLayer.text = "\(pickOptions[0].id ?? 0)"
+         selectedLayer = pickOptions[0]
+      }
    }
    
    
