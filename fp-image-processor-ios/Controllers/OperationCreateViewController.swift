@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import Toast_Swift
 
 class OperationCreateViewController: UIViewController {
    @IBOutlet weak var txtName: UITextField!
@@ -19,6 +20,7 @@ class OperationCreateViewController: UIViewController {
    @IBOutlet weak var txtW: UITextField!
    @IBOutlet weak var txtH: UITextField!
    @IBOutlet weak var txtMatrix: UITextView!
+   @IBOutlet weak var switchReverse: UISwitch!
    
    var pickOptions: [String]!
    var selectedOperations: [Operation] = []
@@ -97,6 +99,10 @@ class OperationCreateViewController: UIViewController {
          }
       }
       
+      if toastMsg != "" {
+         self.view.makeToast(toastMsg)
+      }
+      
       return res
    }
 
@@ -148,6 +154,7 @@ class OperationCreateViewController: UIViewController {
          }
          
          DB.shared.operations.append(operation)
+         navigationController?.popViewController(animated: true)
       }
    }
    

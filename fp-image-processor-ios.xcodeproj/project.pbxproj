@@ -11,6 +11,7 @@
 		4539FF45214ABC1E0001F00F /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539FF44214ABC1E0001F00F /* Operation.swift */; };
 		4539FF49214AC8C80001F00F /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539FF48214AC8C80001F00F /* JSONHelper.swift */; };
 		4539FF4B214ACA280001F00F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539FF4A214ACA280001F00F /* MainViewController.swift */; };
+		453D5B61214FDDF10024CE51 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D5B60214FDDF10024CE51 /* UIView.swift */; };
 		453D73F2214AADFB00D2E813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453D73F1214AADFB00D2E813 /* AppDelegate.swift */; };
 		453D73F7214AADFB00D2E813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453D73F5214AADFB00D2E813 /* Main.storyboard */; };
 		453D73F9214AADFC00D2E813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453D73F8214AADFC00D2E813 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		4539FF44214ABC1E0001F00F /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		4539FF48214AC8C80001F00F /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		4539FF4A214ACA280001F00F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		453D5B60214FDDF10024CE51 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		453D73EE214AADFB00D2E813 /* fp-image-processor-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fp-image-processor-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		453D73F1214AADFB00D2E813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		453D73F6214AADFB00D2E813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				4591E855214BCA9000951C08 /* UITableViewCell.swift */,
+				453D5B60214FDDF10024CE51 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				4591E859214BCB0600951C08 /* OperationTableViewCell.swift in Sources */,
 				4591E839214B9CE700951C08 /* ResultViewController.swift in Sources */,
 				4591E83B214B9CF600951C08 /* OperationCreateViewController.swift in Sources */,
+				453D5B61214FDDF10024CE51 /* UIView.swift in Sources */,
 				4591E854214BC6EB00951C08 /* Segue.swift in Sources */,
 				453D7412214AB2D700D2E813 /* Key.swift in Sources */,
 				4591E82F214B946400951C08 /* LayerManageViewController.swift in Sources */,

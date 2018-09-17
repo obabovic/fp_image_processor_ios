@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class SelectionCreateViewController: UIViewController {
    @IBOutlet weak var txtName: UITextField!
@@ -54,6 +55,10 @@ class SelectionCreateViewController: UIViewController {
       if selectedOperations.count == 0 {
          res = false
          toastMsg.append("Please choose an operation.\n")
+      }
+      
+      if toastMsg != "" {
+         self.view.makeToast(toastMsg)
       }
       
       return res
@@ -110,7 +115,7 @@ extension SelectionCreateViewController: UIPickerViewDataSource {
    
    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
       selectedLayer = pickOptions[row]
-      txtLayer.text = String(describing: pickOptions[row].id)
+      txtLayer.text = "\(pickOptions[row].id ?? 0)"
    }
 }
 

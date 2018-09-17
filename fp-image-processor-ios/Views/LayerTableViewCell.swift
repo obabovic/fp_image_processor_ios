@@ -9,22 +9,47 @@
 import UIKit
 
 class LayerTableViewCell: UITableViewCell {
+   @IBOutlet weak var lblId: UILabel!
+   @IBOutlet weak var lblImg: UILabel!
+   @IBOutlet weak var lblAlpha: UILabel!
+   @IBOutlet weak var lblActive: UILabel!
+   @IBOutlet weak var wrapperView: UIView!
+   
    var content: Layer? {
       didSet {
          setup()
       }
    }
    
+   override func awakeFromNib() {
+      super.awakeFromNib()
+      
+      wrapperView.layer.cornerRadius = 8.0
+   }
+   
    
    // MARK: - Setup
    
    func reset() {
-      
+      lblId.text = ""
+      lblImg.text = ""
+      lblAlpha.text = ""
+      lblActive.text = ""
    }
    
    func setup() {
       reset()
       
-      //TODO: Setup
+      if let content = content {
+         lblId.text = "\(content.id ?? 0)"
+         lblImg.text = "\(content.imagePath ?? "")"
+         lblAlpha.text = "\(content.alpha ?? 1.0)"
+         lblActive.text = (content.active ?? true) ? "Active" : "Inactive"
+      }
    }
 }
+
+
+// MARK: - ReusableView
+
+extension LayerTableViewCell: ReusableView {}

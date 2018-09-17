@@ -22,3 +22,8 @@ class RectangleTableViewCell: UITableViewCell {
     }
     
 }
+
+
+// MARK: - ResuableView
+
+extension RectangleTableViewCell: ReusableView {}

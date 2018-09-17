@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class RectangleCreateViewController: UIViewController {
    @IBOutlet weak var txtSelection: UITextField!
@@ -63,6 +64,10 @@ class RectangleCreateViewController: UIViewController {
       if txtEndY.text == nil || txtEndY.text == "" {
          res = false
          toastMsg.append("End Y is empty.\n")
+      }
+      
+      if toastMsg != "" {
+         self.view.makeToast(toastMsg)
       }
       
       return res

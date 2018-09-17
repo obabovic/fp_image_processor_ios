@@ -9,16 +9,68 @@
 import UIKit
 
 class SelectionTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+   @IBOutlet weak var lblName: UILabel!
+   @IBOutlet weak var lblActive: UILabel!
+   @IBOutlet weak var lblRectangles: UILabel!
+   @IBOutlet weak var lblOperations: UILabel!
+   @IBOutlet weak var wrapperView: UIView!
+   
+   var content: Selection? {
+      didSet {
+         setup()
+      }
+   }
+   
+   
+   // MARK: - Lifecycle
+   
+   override func awakeFromNib() {
+      super.awakeFromNib()
+      
+      wrapperView.layer.cornerRadius = 8.0
+   }
+   
+   
+   // MARK: - Setup
+   
+   private func reset() {
+      lblName.text = ""
+      lblActive.text = ""
+      lblRectangles.text = ""
+      lblOperations.text = ""
+   }
+   
+   func setup() {
+      reset()
+      
+      if let content = content {
+         lblName.text = content.name ?? ""
+         lblActive.text = (content.active ?? true) ? "Active" : "Inactive"
+         
+         if let rects = content.rectangles,
+            rects.count > 0 {
+            var str = String(describing: rects[0].self)
+            
+            for rect in rects.dropFirst() {
+               str.append(", ")
+               str.append(String(describing: rect.self))
+            }
+         }
+         
+         if let ops = content.ops,
+            ops.count > 0 {
+            var str = String(describing: ops[0].self)
+            
+            for op in ops.dropFirst() {
+               str.append(", ")
+               str.append(String(describing: op.self))
+            }
+         }
+      }
+   }
 }
+
+
+// MARK: - ReusableView
+
+extension SelectionTableViewCell: ReusableView {}

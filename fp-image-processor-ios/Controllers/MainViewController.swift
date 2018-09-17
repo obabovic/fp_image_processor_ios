@@ -26,6 +26,7 @@ class MainViewController: UIViewController {
       tableView.delegate = self
       tableView.dataSource = self
       tableView.register(UINib(nibName: String(describing: LayerTableViewCell.self), bundle: nil), forCellReuseIdentifier: LayerTableViewCell.identifier)
+      tableView.separatorStyle = .none
       
       // Setup Floaty
       let floaty = Floaty()
@@ -47,6 +48,13 @@ class MainViewController: UIViewController {
       }
       
       self.view.addSubview(floaty)
+   }
+   
+   override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      
+      layers = DB.shared.layers
+      tableView.reloadData()
    }
    
    

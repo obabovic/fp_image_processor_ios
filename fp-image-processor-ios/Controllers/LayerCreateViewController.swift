@@ -46,6 +46,10 @@ class LayerCreateViewController: UIViewController {
          toastMsg.append("Alpha is empty.\n")
       }
       
+      if toastMsg != "" {
+         self.view.makeToast(toastMsg)
+      }
+      
       return res
    }
    
