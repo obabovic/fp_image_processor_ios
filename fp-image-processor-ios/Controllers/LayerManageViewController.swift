@@ -27,6 +27,12 @@ class LayerManageViewController: UIViewController {
       tableView.dataSource = self
       tableView.register(UINib(nibName: String(describing: SelectionTableViewCell.self), bundle: nil), forCellReuseIdentifier: SelectionTableViewCell.identifier)
       tableView.separatorStyle = .none
+      
+      
+      if let layer = layer,
+         let selectionz = layer.selections {
+         selections = selectionz
+      }
    }
 }
 
@@ -39,7 +45,7 @@ extension LayerManageViewController: UITableViewDelegate {
       tableView.deselectRow(at: indexPath, animated: true)
       
       selectedSelection = selections[indexPath.row]
-      performSegue(withIdentifier: Segue.showLayerManage, sender: self)
+      performSegue(withIdentifier: Segue.showSelectionManage, sender: self)
    }
 }
 

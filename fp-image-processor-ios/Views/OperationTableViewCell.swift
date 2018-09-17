@@ -13,7 +13,11 @@ class OperationTableViewCell: UITableViewCell {
    @IBOutlet weak var lblAttributes: UILabel!
    @IBOutlet weak var wrapperView: UIView!
    
-   var content: Operation?
+   var content: Operation? {
+      didSet {
+         setup()
+      }
+   }
    
    
    // MARK: - Lifecycle

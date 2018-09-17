@@ -17,7 +17,7 @@ class RectangleCreateViewController: UIViewController {
    @IBOutlet weak var txtEndY: UITextField!
    @IBOutlet weak var btnSubmit: UIButton!
    
-   var pickOptions: [Selection]!
+   var pickOptions: [Selection] = []
    var selectedSelection: Selection?
    
    override func viewDidLoad() {

@@ -9,27 +9,73 @@
 import UIKit
 
 class SelectionManageViewController: UIViewController {
+   var selection: Selection?
+   
+   var rectangles: [Rectangle] = []
+   var selectedRectangle: Rectangle?
+   
+   @IBOutlet weak var lblName: UILabel!
+   @IBOutlet weak var switchActive: UISwitch!
+   @IBOutlet weak var lblOperations: UILabel!
+   @IBOutlet weak var tableView: UITableView!
+   
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      
+      // Setup tableView
+      tableView.delegate = self
+      tableView.dataSource = self
+      tableView.register(UINib(nibName: String(describing: RectangleTableViewCell.self), bundle: nil), forCellReuseIdentifier: RectangleTableViewCell.identifier)
+      tableView.separatorStyle = .none
+      
+      if let selection = selection {
+         lblName.text = selection.name ?? ""
+         switchActive.isOn = selection.active ?? true
+         if let ops = selection.ops,
+            ops.count > 0 {
+            var str = String(describing: ops[0].self)
+            
+            for op in ops.dropFirst() {
+               str.append(", ")
+               str.append(String(describing: op.self))
+            }
+            lblOperations.text = str
+         }
+         
+         if let rects = selection.rectangles {
+            rectangles = rects
+         }
+      }
+   }
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+// MARK: - UITableViewDelegate
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+extension SelectionManageViewController: UITableViewDelegate {
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      tableView.deselectRow(at: indexPath, animated: true)
+      
+      selectedRectangle = rectangles[indexPath.row]
+      performSegue(withIdentifier: Segue.showRectangleManage, sender: self)
+   }
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+// MARK: - UITableViewDataSource
 
+extension SelectionManageViewController: UITableViewDataSource {
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      let cell = tableView.dequeueReusableCell(withIdentifier: RectangleTableViewCell.identifier, for: indexPath) as! RectangleTableViewCell
+      cell.content = rectangles[indexPath.row]
+      return cell
+   }
+   
+   func numberOfSections(in tableView: UITableView) -> Int {
+      return 1
+   }
+   
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      return rectangles.count
+   }
 }
