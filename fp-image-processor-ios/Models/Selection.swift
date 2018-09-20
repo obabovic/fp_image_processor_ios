@@ -11,8 +11,8 @@ import SwiftyJSON
 
 class Selection: APIEntity {
    var name: String?
-   var rectangles: [Rectangle]?
-   var ops: [Operation]?
+   var rectangles: [Rectangle]? = []
+   var ops: [Operation]? = []
    var active: Bool?
    
    init(name: String, ops: [Operation], active: Bool) {
