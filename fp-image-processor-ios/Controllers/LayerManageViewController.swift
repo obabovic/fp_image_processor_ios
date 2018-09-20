@@ -32,7 +32,26 @@ class LayerManageViewController: UIViewController {
       if let layer = layer,
          let selectionz = layer.selections {
          selections = selectionz
+         switchActive.isOn = layer.active ?? true
       }
+   }
+   
+   
+   // MARK: - Navigation
+   
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if segue.identifier == Segue.showSelectionManage {
+         let vc = segue.destination as! SelectionManageViewController
+         
+         vc.selection = selectedSelection
+      }
+   }
+   
+   
+   // MARK: - Actions
+   
+   @IBAction func switchActiveAction(_ sender: Any) {
+      layer?.active = switchActive.isOn
    }
 }
 

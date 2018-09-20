@@ -58,6 +58,13 @@ class SelectionManageViewController: UIViewController {
          vc.rectangle = selectedRectangle
       }
    }
+   
+   
+   // MARK: - Actions
+   
+   @IBAction func switchActiveAction(_ sender: Any) {
+      selection?.active = switchActive.isOn
+   }
 }
 
 

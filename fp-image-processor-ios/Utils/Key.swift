@@ -11,8 +11,11 @@ import Foundation
 struct Key {
    static let x = "x"
    static let y = "y"
+   static let width = "width"
+   static let height = "height"
    static let start = "start"
    static let end = "end"
+   static let url = "url"
    static let rectangles = "rectangles"
    static let selections = "selections"
    static let layers = "layers"

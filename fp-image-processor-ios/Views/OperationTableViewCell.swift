@@ -46,7 +46,8 @@ class OperationTableViewCell: UITableViewCell {
          lblAttributes.text?.append("RGB: (\(mc.r ?? 0.0), \(mc.r ?? 0.0), \(mc.r ?? 0.0))\n")
       }
       
-      if let ops = content.ops {
+      if let ops = content.ops,
+         ops.count > 0 {
          lblAttributes.text?.append(ops[0].name ?? "")
          for op in ops.dropFirst() {
             lblAttributes.text?.append(", \(op.name ?? "")")
@@ -60,7 +61,8 @@ class OperationTableViewCell: UITableViewCell {
          lblAttributes.text?.append("WH: (\(w), \(h))\n")
       }
       
-      if let mat = content.pMat {
+      if let mat = content.pMat,
+         mat.count > 0 {
          lblAttributes.text?.append("pMat: \n")
          for arr in mat {
             if arr.count > 0 {

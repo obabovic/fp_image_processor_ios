@@ -44,6 +44,7 @@
 		4591E85E214BCB2400951C08 /* RectangleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4591E85C214BCB2400951C08 /* RectangleTableViewCell.xib */; };
 		4591E860214BED7000951C08 /* OperationManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591E85F214BED7000951C08 /* OperationManageViewController.swift */; };
 		45B266202153C78A004AF59D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B2661F2153C78A004AF59D /* Router.swift */; };
+		45B266222153C841004AF59D /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B266212153C841004AF59D /* AppService.swift */; };
 		C651F6FAF3F7719B282D8AEA /* Pods_fp_image_processor_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697EA52304E5FB81E2E0EB78 /* Pods_fp_image_processor_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		4591E85C214BCB2400951C08 /* RectangleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RectangleTableViewCell.xib; sourceTree = "<group>"; };
 		4591E85F214BED7000951C08 /* OperationManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationManageViewController.swift; sourceTree = "<group>"; };
 		45B2661F2153C78A004AF59D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		45B266212153C841004AF59D /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
 		697EA52304E5FB81E2E0EB78 /* Pods_fp_image_processor_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fp_image_processor_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		927EEA94A8C4913BC670526F /* Pods-fp-image-processor-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fp-image-processor-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-fp-image-processor-ios/Pods-fp-image-processor-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B434BDF22105BF8F078551D9 /* Pods-fp-image-processor-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fp-image-processor-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fp-image-processor-ios/Pods-fp-image-processor-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				45B2661F2153C78A004AF59D /* Router.swift */,
+				45B266212153C841004AF59D /* AppService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				4539FF45214ABC1E0001F00F /* Operation.swift in Sources */,
 				4591E852214BC5D800951C08 /* OperationsModalViewController.swift in Sources */,
 				4539FF3E214AB5A50001F00F /* APIEntity.swift in Sources */,
+				45B266222153C841004AF59D /* AppService.swift in Sources */,
 				453D740F214AB24800D2E813 /* MColor.swift in Sources */,
 				453D73F2214AADFB00D2E813 /* AppDelegate.swift in Sources */,
 				4591E845214B9E2900951C08 /* SelectionTableViewCell.swift in Sources */,

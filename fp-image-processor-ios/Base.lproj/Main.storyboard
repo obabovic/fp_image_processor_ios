@@ -76,16 +76,30 @@
             </objects>
             <point key="canvasLocation" x="354" y="41"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="Udl-QP-Nhy">
             <objects>
-                <viewController id="WCL-gx-psY" sceneMemberID="viewController">
+                <viewController id="WCL-gx-psY" customClass="ResultViewController" customModule="fp_image_processor_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9dF-uT-CrT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BoS-5b-tyP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BoS-5b-tyP" firstAttribute="top" secondItem="C81-8A-X2I" secondAttribute="top" id="L4J-JC-XHy"/>
+                            <constraint firstItem="C81-8A-X2I" firstAttribute="trailing" secondItem="BoS-5b-tyP" secondAttribute="trailing" id="Xhh-bZ-t4T"/>
+                            <constraint firstItem="C81-8A-X2I" firstAttribute="bottom" secondItem="BoS-5b-tyP" secondAttribute="bottom" id="cJe-HJ-Ghc"/>
+                            <constraint firstItem="BoS-5b-tyP" firstAttribute="leading" secondItem="C81-8A-X2I" secondAttribute="leading" id="nt1-5M-aKC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="C81-8A-X2I"/>
                     </view>
+                    <connections>
+                        <outlet property="img" destination="BoS-5b-tyP" id="gN6-m8-BMb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJi-Fy-hFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -666,7 +680,7 @@ Cg
         <!--Rectangle Manage View Controller-->
         <scene sceneID="ugT-yb-GJk">
             <objects>
-                <viewController id="IuC-we-UsP" customClass="RectangleManageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RectangleManageViewController" id="IuC-we-UsP" customClass="RectangleManageViewController" customModule="fp_image_processor_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dcW-Wd-fjL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -740,7 +754,7 @@ Cg
         <!--Selection Manage View Controller-->
         <scene sceneID="YoK-xw-Dla">
             <objects>
-                <viewController id="ENm-dt-E7I" customClass="SelectionManageViewController" customModule="fp_image_processor_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectionManageViewController" id="ENm-dt-E7I" customClass="SelectionManageViewController" customModule="fp_image_processor_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S0p-w1-BRN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -782,6 +796,9 @@ Cg
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceR-Eo-yDl">
                                                 <rect key="frame" x="171.5" y="0.0" width="173.5" height="31"/>
+                                                <connections>
+                                                    <action selector="switchActiveAction:" destination="ENm-dt-E7I" eventType="valueChanged" id="Nbm-FR-X9S"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -830,7 +847,6 @@ Cg
                         <outlet property="switchActive" destination="ceR-Eo-yDl" id="cwm-T2-bMU"/>
                         <outlet property="tableView" destination="2Be-8Z-nkO" id="SSI-ul-2fc"/>
                         <segue destination="IuC-we-UsP" kind="show" identifier="showRectangleManage" id="kME-rH-Gt8"/>
-                        <segue destination="6ib-jO-f25" kind="show" identifier="showOperationManage" id="4ha-mB-Jjc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUW-CC-lI3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -916,6 +932,9 @@ Cg
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ey-ur-MbF">
                                                 <rect key="frame" x="171.5" y="0.0" width="173.5" height="31"/>
+                                                <connections>
+                                                    <action selector="switchActiveAction:" destination="zmy-OC-GBi" eventType="valueChanged" id="N4Z-kC-CfP"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -953,21 +972,6 @@ Cg
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fuv-5X-8zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1145" y="-779"/>
-        </scene>
-        <!--Operations Modal View Controller-->
-        <scene sceneID="Kyt-qD-jFg">
-            <objects>
-                <viewController id="6ib-jO-f25" customClass="OperationsModalViewController" customModule="fp_image_processor_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Nc2-YG-vnu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Zgu-xS-4Bt"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zun-1f-bYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2798" y="-1520"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

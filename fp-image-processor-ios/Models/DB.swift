@@ -42,6 +42,9 @@ class DB: APIEntity {
    func toJSON() -> [String : Any] {
       var json: [String: Any] = [:]
       
+      json[Key.height] = h
+      json[Key.width] = w
+      
       if layers.count > 0 {
          json[Key.layers] = JSONHelper.toJsonArray(fromArray: layers)
       }

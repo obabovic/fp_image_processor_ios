@@ -31,7 +31,7 @@ class Operation: APIEntity {
       }
       
       if let mc = mc {
-         json[Key.mc] = mc
+         json[Key.mc] = mc.toJSON()
       }
       
       if let w = w {
@@ -42,7 +42,8 @@ class Operation: APIEntity {
          json[Key.h] = h
       }
       
-      if let pMat = pMat {
+      if let pMat = pMat,
+         pMat.count > 0 {
          var pMatAll: [NSMutableArray] = []
          
          for arr in pMat {

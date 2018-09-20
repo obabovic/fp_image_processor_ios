@@ -9,6 +9,11 @@
 import UIKit
 
 class RectangleTableViewCell: UITableViewCell {
+   @IBOutlet weak var lblStart: UILabel!
+   @IBOutlet weak var lblEnd: UILabel!
+   @IBOutlet weak var wrapperView: UIView!
+   
+   
    var content: Rectangle? {
       didSet {
          setup()
@@ -20,17 +25,31 @@ class RectangleTableViewCell: UITableViewCell {
    
    override func awakeFromNib() {
       super.awakeFromNib()
+      
+      wrapperView.layer.cornerRadius = 8.0
    }
    
    
    // MARK: - Setup
    
    private func reset() {
-      
+      lblStart.text = ""
+      lblEnd.text = ""
    }
    
    func setup() {
       reset()
+      
+      if let content = content,
+         let s = content.start,
+         let e = content.end,
+         let sx = s.x,
+         let sy = s.y,
+         let ex = e.x,
+         let ey = e.y {
+         lblStart.text = "(\(sx), \(sy))"
+         lblStart.text = "(\(ex), \(ey))"
+      }
    }
 }
 

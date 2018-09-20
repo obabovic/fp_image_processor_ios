@@ -43,6 +43,7 @@ class Layer: APIEntity {
       json[Key.id] = id
       json[Key.alpha] = alpha
       json[Key.active] = active
+      json[Key.imagePath] = imagePath
       
       if let selections = selections {
          json[Key.selections] = JSONHelper.toJsonArray(fromArray: selections)

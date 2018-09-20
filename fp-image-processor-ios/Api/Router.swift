@@ -11,21 +11,21 @@ import Alamofire
 
 enum Router: URLRequestConvertible {
    static let baseURL: URL! = URL(string: "http://localhost:9000")
-   
+   static let baseAssetsURL: URL! = baseURL.appendingPathComponent("assets")
    var formedURL: URL { return Router.baseURL.appendingPathComponent(route.path) }
    
    
    // MARK: - Endpoints
    
-   case execute(DB)
+   case formImage(DB)
    
    
    // MARK: - Routes
    
    var route: (path: String, parameters: [String: Any]?) {
       switch self {
-      case .execute(let request):
-         return (path: "srv/json/login", parameters: request.toJSON())
+      case .formImage(let request):
+         return (path: "/execute", parameters: request.toJSON())
       }
    }
    
@@ -34,8 +34,10 @@ enum Router: URLRequestConvertible {
    
    var method: HTTPMethod {
       switch self {
-      default:
+      case .formImage:
          return .post
+      default:
+         return .get
       }
    }
    
@@ -46,7 +48,7 @@ enum Router: URLRequestConvertible {
       switch method {
       default:
          switch self {
-         case .execute:
+         case .formImage:
             return Alamofire.JSONEncoding.default
          default:
             return Alamofire.URLEncoding.default
@@ -59,16 +61,14 @@ enum Router: URLRequestConvertible {
    
    func asURLRequest() throws -> URLRequest {
       var request = URLRequest(url: formedURL)
-      var parameters = route.parameters
       
       request.httpMethod = method.rawValue
-      request.setValue("application/json", forHTTPHeaderField: "Accepts")
       
       if encoder is Alamofire.JSONEncoding {
-         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
       }
 
-      return try encoder.encode(request, with: parameters ?? [:])
+      return try encoder.encode(request, with: route.parameters ?? [:])
    }
    
 }

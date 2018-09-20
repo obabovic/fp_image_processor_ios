@@ -9,13 +9,14 @@
 import UIKit
 import SwiftyJSON
 import Floaty
+import PromiseKit
 
 class MainViewController: UIViewController {
    @IBOutlet weak var tableView: UITableView!
    
    var layers: [Layer] = []
    var selectedLayer: Layer?
-
+   var urlString: String?
    
    // MARK: - Lifecycle
    
@@ -48,7 +49,17 @@ class MainViewController: UIViewController {
       }
       
       floaty.addItem(title: "Execute") { _ in
-         self.performSegue(withIdentifier: Segue.showResult, sender: self)
+         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+         firstly {
+            AppService.formImage(request: DB.shared)
+            }.done { response in
+               self.urlString = response
+               self.performSegue(withIdentifier: Segue.showResult, sender: self)
+            }.catch { err in
+               self.view.makeToast(err.localizedDescription)
+            }.finally {
+               UIApplication.shared.isNetworkActivityIndicatorVisible = false
+         }
       }
       
       self.view.addSubview(floaty)
@@ -69,6 +80,10 @@ class MainViewController: UIViewController {
          let vc = segue.destination as! LayerManageViewController
          
          vc.layer = selectedLayer
+      } else if segue.identifier == Segue.showResult {
+         let vc = segue.destination as! ResultViewController
+         
+         vc.urlString = urlString
       }
    }
 }
