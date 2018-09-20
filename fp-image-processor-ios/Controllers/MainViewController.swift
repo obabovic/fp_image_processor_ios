@@ -47,6 +47,10 @@ class MainViewController: UIViewController {
          self.performSegue(withIdentifier: Segue.showOperationCreate, sender: self)
       }
       
+      floaty.addItem(title: "Execute") { _ in
+         self.performSegue(withIdentifier: Segue.showResult, sender: self)
+      }
+      
       self.view.addSubview(floaty)
    }
    

@@ -47,6 +47,17 @@ class SelectionManageViewController: UIViewController {
          }
       }
    }
+   
+   
+   // MARK: - Navigation
+   
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if segue.identifier == Segue.showRectangleManage {
+         let vc = segue.destination as! RectangleManageViewController
+         
+         vc.rectangle = selectedRectangle
+      }
+   }
 }
 
 
