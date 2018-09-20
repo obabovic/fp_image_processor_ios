@@ -36,6 +36,10 @@ class MainViewController: UIViewController {
          self.performSegue(withIdentifier: Segue.showLayerCreate, sender: self)
       }
       
+      floaty.addItem(title: "New Operation") { _ in
+         self.performSegue(withIdentifier: Segue.showOperationCreate, sender: self)
+      }
+      
       floaty.addItem(title: "New Selection") { _ in
          self.performSegue(withIdentifier: Segue.showSelectionCreate, sender: self)
       }
@@ -44,8 +48,23 @@ class MainViewController: UIViewController {
          self.performSegue(withIdentifier: Segue.showRectangleCreate, sender: self)
       }
       
-      floaty.addItem(title: "New Operation") { _ in
-         self.performSegue(withIdentifier: Segue.showOperationCreate, sender: self)
+      floaty.addItem(title: "Load Configuration") { _ in
+         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+         firstly {
+            AppService.loadConfiguration()
+            }.done { response in
+               if let response = response {
+                  DB.shared = response
+                  self.layers = DB.shared.layers
+                  self.tableView.reloadData()
+               } else {
+                  self.view.makeToast("No existing configuration")
+               }
+            }.catch { err in
+               self.view.makeToast(err.localizedDescription)
+            }.finally {
+               UIApplication.shared.isNetworkActivityIndicatorVisible = false
+         }
       }
       
       floaty.addItem(title: "Execute") { _ in

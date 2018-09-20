@@ -48,7 +48,7 @@ class RectangleTableViewCell: UITableViewCell {
          let ex = e.x,
          let ey = e.y {
          lblStart.text = "(\(sx), \(sy))"
-         lblStart.text = "(\(ex), \(ey))"
+         lblEnd.text = "(\(ex), \(ey))"
       }
    }
 }

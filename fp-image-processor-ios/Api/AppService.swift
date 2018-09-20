@@ -36,4 +36,26 @@ class AppService {
          }
       }
    }
+   
+   /**
+    Loads the previously saved configuration
+    
+    - parameter request: wrapper for all data
+    - returns: A Promise with url of destination image
+    */
+   
+   static func loadConfiguration() -> Promise<DB?> {
+      return Promise { seal in
+         Alamofire.request(Router.loadConfiguration())
+            .validate()
+            .responseJSON { response in
+               switch response.result {
+               case .success(let data):
+                  seal.fulfill(DB(fromJSON: JSON(data)))
+               case .failure(let err):
+                  seal.reject(err)
+               }
+         }
+      }
+   }
 }

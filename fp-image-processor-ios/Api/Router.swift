@@ -18,6 +18,7 @@ enum Router: URLRequestConvertible {
    // MARK: - Endpoints
    
    case formImage(DB)
+   case loadConfiguration()
    
    
    // MARK: - Routes
@@ -26,7 +27,10 @@ enum Router: URLRequestConvertible {
       switch self {
       case .formImage(let request):
          return (path: "/execute", parameters: request.toJSON())
+      case .loadConfiguration():
+         return (path: "/load", parameters: [:])
       }
+      
    }
    
    
