@@ -21,6 +21,35 @@ class Operation: APIEntity {
    
    required init(fromJSON json: JSON) {
       name = json[Key.name].string
+      w = json[Key.w].int
+      h = json[Key.h].int
+      
+      if json[Key.mc] != nil {
+         mc = MColor(fromJSON: json[Key.mc])
+      }
+      
+      if let arr = json[Key.operations].array {
+         ops = []
+         for jsonOp in arr {
+            ops?.append(Operation(fromJSON: jsonOp))
+         }
+      }
+      
+      if let mat = json[Key.operations].array,
+         mat.count > 0 {
+         pMat = [[]]
+         for arr in mat {
+            if let arr = arr.array {
+               var tmp: [MColor] = []
+
+               for item in arr {
+                  tmp.append(MColor(fromJSON: item))
+               }
+               
+               pMat?.append(tmp)
+            }
+         }
+      }
    }
    
    func toJSON() -> [String : Any] {

@@ -33,11 +33,11 @@ class SelectionManageViewController: UIViewController {
          switchActive.isOn = selection.active ?? true
          if let ops = selection.ops,
             ops.count > 0 {
-            var str = String(describing: ops[0].self)
+            var str = ops[0].name ?? ""
             
             for op in ops.dropFirst() {
                str.append(", ")
-               str.append(String(describing: op.self))
+               str.append(op.name ?? "")
             }
             lblOperations.text = str
          }
