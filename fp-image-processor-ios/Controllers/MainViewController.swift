@@ -117,6 +117,18 @@ extension MainViewController: UITableViewDelegate {
       selectedLayer = layers[indexPath.row]
       performSegue(withIdentifier: Segue.showLayerManage, sender: self)
    }
+   
+   func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+      return true
+   }
+   
+   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+      if (editingStyle == UITableViewCellEditingStyle.delete) {
+         DB.shared.layers.remove(at: indexPath.row)
+         layers.remove(at: indexPath.row)
+         tableView.reloadData()
+      }
+   }
 }
 
 

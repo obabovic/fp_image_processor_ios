@@ -66,6 +66,18 @@ extension LayerManageViewController: UITableViewDelegate {
       selectedSelection = selections[indexPath.row]
       performSegue(withIdentifier: Segue.showSelectionManage, sender: self)
    }
+   
+   func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+      return true
+   }
+   
+   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+      if (editingStyle == UITableViewCellEditingStyle.delete) {
+         selections.remove(at: indexPath.row)
+         layer?.selections?.remove(at: indexPath.row)
+         tableView.reloadData()
+      }
+   }
 }
 
 

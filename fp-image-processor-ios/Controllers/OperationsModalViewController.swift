@@ -51,6 +51,18 @@ extension OperationsModalViewController: UITableViewDelegate {
    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
       tableView.deselectRow(at: indexPath, animated: true)
    }
+   
+   func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+      return true
+   }
+   
+   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+      if (editingStyle == UITableViewCellEditingStyle.delete) {
+         items.remove(at: indexPath.row)
+         DB.shared.operations.remove(at: indexPath.row)
+         tableView.reloadData()
+      }
+   }
 }
 
 

@@ -77,6 +77,18 @@ extension SelectionManageViewController: UITableViewDelegate {
       selectedRectangle = rectangles[indexPath.row]
       performSegue(withIdentifier: Segue.showRectangleManage, sender: self)
    }
+   
+   func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+      return true
+   }
+   
+   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+      if (editingStyle == UITableViewCellEditingStyle.delete) {
+         rectangles.remove(at: indexPath.row)
+         selection?.rectangles?.remove(at: indexPath.row)
+         tableView.reloadData()
+      }
+   }
 }
 
 
