@@ -33,6 +33,8 @@ class LayerManageViewController: UIViewController {
          let selectionz = layer.selections {
          selections = selectionz
          switchActive.isOn = layer.active ?? true
+         lblAlpha.text = "\(layer.alpha ?? 1.0)"
+         lblId.text = "\(layer.id ?? 0)"
       }
    }
    

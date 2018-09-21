@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -80,19 +81,21 @@
         <scene sceneID="Udl-QP-Nhy">
             <objects>
                 <viewController id="WCL-gx-psY" customClass="ResultViewController" customModule="fp_image_processor_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9dF-uT-CrT">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="9dF-uT-CrT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BoS-5b-tyP">
-                                <rect key="frame" x="0.0" y="32" width="375" height="667"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BoS-5b-tyP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BoS-5b-tyP" secondAttribute="height" multiplier="9:16" id="2su-7C-IEL"/>
+                                    <constraint firstAttribute="width" constant="375" id="uGV-W5-wyZ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BoS-5b-tyP" firstAttribute="centerY" secondItem="C81-8A-X2I" secondAttribute="centerY" id="87M-xw-6Hl"/>
-                            <constraint firstItem="BoS-5b-tyP" firstAttribute="width" secondItem="9dF-uT-CrT" secondAttribute="width" id="Xgm-tr-Wrt"/>
-                            <constraint firstItem="BoS-5b-tyP" firstAttribute="height" secondItem="9dF-uT-CrT" secondAttribute="height" id="crg-mF-pbS"/>
+                            <constraint firstItem="C81-8A-X2I" firstAttribute="top" secondItem="BoS-5b-tyP" secondAttribute="top" id="6wW-ac-kTX"/>
                             <constraint firstItem="BoS-5b-tyP" firstAttribute="centerX" secondItem="C81-8A-X2I" secondAttribute="centerX" id="oci-ij-VPg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C81-8A-X2I"/>

@@ -80,14 +80,14 @@ class OperationCreateViewController: UIViewController {
          }
          
          if txtName.text! == Key.Operation.ponder {
-            let json = JSON(txtMatrix.text).arrayValue
-            var count = json.count
+            let json = JSON(parseJSON: txtMatrix.text).arrayValue
+            var count = 0
             
             for item in json {
                count += item.arrayValue.count
             }
             
-            if count != Int(txtW.text!)! + Int(txtH.text!)! {
+            if count != (2*Int(txtW.text!)!+1) * (2*Int(txtH.text!)!+1) {
                res = false
                toastMsg.append("Matrix format not in sync with W + H.")
             }
@@ -134,7 +134,7 @@ class OperationCreateViewController: UIViewController {
          }
          
          
-         let json = JSON(txtMatrix.text).arrayValue
+         let json = JSON(parseJSON: txtMatrix.text).arrayValue
          var mat: [[MColor]] = []
          
          for arr in json {

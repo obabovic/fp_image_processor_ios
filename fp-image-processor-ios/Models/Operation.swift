@@ -39,7 +39,7 @@ class Operation: APIEntity {
       
       if let mat = json[Key.pMat].array,
          mat.count > 0 {
-         pMat = [[]]
+         pMat = []
          for arr in mat {
             if let arr = arr.array {
                var tmp: [MColor] = []
@@ -57,7 +57,7 @@ class Operation: APIEntity {
    func toJSON() -> [String : Any] {
       var json: [String: Any] = [:]
       
-      if let name = name {
+      if let name = name { 
          json[Key.name] = name
       }
       

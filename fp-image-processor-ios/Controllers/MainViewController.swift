@@ -73,7 +73,11 @@ class MainViewController: UIViewController {
             AppService.formImage(request: DB.shared)
             }.done { response in
                self.urlString = response
-               self.performSegue(withIdentifier: Segue.showResult, sender: self)
+               
+               self.view.makeToast("Success!")
+               DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1), execute: {
+                  self.performSegue(withIdentifier: Segue.showResult, sender: self)
+               })
             }.catch { err in
                self.view.makeToast(err.localizedDescription)
             }.finally {

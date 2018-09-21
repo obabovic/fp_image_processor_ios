@@ -19,7 +19,7 @@ class DB: APIEntity {
    
    // MARK: - Singleton
    
-   private init() { w = 1000; h = 1000}
+   private init() { w = 720; h = 1280 }
    
    class func initFromJSON(fromJSON json: JSON) {
       shared = DB(fromJSON: json)
