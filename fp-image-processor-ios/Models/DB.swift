@@ -37,6 +37,13 @@ class DB: APIEntity {
             layers.append(Layer(fromJSON: jsonLayer))
          }
       }
+      
+      if let arr = json[Key.ops].array {
+         operations = []
+         for jsonOperation in arr {
+            operations.append(Operation(fromJSON: jsonOperation))
+         }
+      }
    }
    
    func toJSON() -> [String : Any] {
@@ -47,6 +54,10 @@ class DB: APIEntity {
       
       if layers.count > 0 {
          json[Key.layers] = JSONHelper.toJsonArray(fromArray: layers)
+      }
+      
+      if operations.count > 0 {
+         json[Key.ops] = JSONHelper.toJsonArray(fromArray: operations)
       }
       
       return json

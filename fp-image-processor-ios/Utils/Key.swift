@@ -20,7 +20,6 @@ struct Key {
    static let selections = "selections"
    static let layers = "layers"
    static let ops = "ops"
-   static let operations = "operations"
    static let r = "r"
    static let g = "g"
    static let b = "b"
