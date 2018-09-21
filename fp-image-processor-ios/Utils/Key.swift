@@ -34,6 +34,7 @@ struct Key {
    static let w = "w"
    static let h = "h"
    static let pMat = "pMat"
+   static let reverse = "reverse"
    
    struct Operation {
       static let add = "add"

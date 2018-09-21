@@ -16,7 +16,8 @@ class ResultViewController: UIViewController {
    
    override func viewDidLoad() {
       super.viewDidLoad()
-   
+      
+      img.clipsToBounds = true
       if let urlString = urlString {
          
          img.af_setImage(withURL: Router.baseAssetsURL.appendingPathComponent(urlString))

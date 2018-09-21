@@ -28,8 +28,8 @@ class DB: APIEntity {
    // MARK: - APIEntity
    
    internal required init(fromJSON json: JSON) {
-      w = json[Key.w].int
-      h = json[Key.h].int
+      w = json[Key.width].int
+      h = json[Key.height].int
       
       if let arr = json[Key.layers].array {
          layers = []

@@ -135,7 +135,7 @@ class OperationCreateViewController: UIViewController {
          
          
          let json = JSON(txtMatrix.text).arrayValue
-         var mat: [[MColor]] = [[]]
+         var mat: [[MColor]] = []
          
          for arr in json {
             var mArr: [MColor] = []
@@ -151,6 +151,12 @@ class OperationCreateViewController: UIViewController {
          
          if mat.count > 0 {
             operation.pMat = mat
+         }
+         
+         operation.ops = selectedOperations
+         
+         if operation.name == Key.Operation.composite {
+            operation.reverse = switchReverse.isOn
          }
          
          DB.shared.operations.append(operation)
@@ -216,8 +222,14 @@ extension OperationCreateViewController: UITextFieldDelegate {
 extension OperationCreateViewController: OperationsModalViewControllerDelegate {
    func operationsModalViewControllerWillFinish(operations: [Operation]) {
       selectedOperations = operations
-      for operation in selectedOperations {
-         txtOperations.text?.append(operation.name!)
+      if selectedOperations.count > 0 {
+         var str = selectedOperations[0].name ?? ""
+         
+         for op in selectedOperations.dropFirst() {
+            str.append(", ")
+            str.append(op.name ?? "")
+         }
+         txtOperations.text = str
       }
    }
 }

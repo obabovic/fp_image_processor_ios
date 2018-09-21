@@ -135,8 +135,14 @@ extension SelectionCreateViewController: UITextFieldDelegate {
 extension SelectionCreateViewController: OperationsModalViewControllerDelegate {
    func operationsModalViewControllerWillFinish(operations: [Operation]) {
       selectedOperations = operations
-      for operation in selectedOperations {
-         txtOperations.text?.append(operation.name!)
+      if selectedOperations.count > 0 {
+         var str = selectedOperations[0].name ?? ""
+         
+         for op in selectedOperations.dropFirst() {
+            str.append(", ")
+            str.append(op.name ?? "")
+         }
+         txtOperations.text = str
       }
    }
 }

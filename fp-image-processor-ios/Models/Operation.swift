@@ -16,6 +16,7 @@ class Operation: APIEntity {
    var h: Int?
    var pMat: [[MColor]]?
    var ops: [Operation]?
+   var reverse: Bool?
    
    init() {}
    
@@ -23,19 +24,20 @@ class Operation: APIEntity {
       name = json[Key.name].string
       w = json[Key.w].int
       h = json[Key.h].int
+      reverse = json[Key.reverse].bool
       
       if json[Key.mc] != nil {
          mc = MColor(fromJSON: json[Key.mc])
       }
       
-      if let arr = json[Key.operations].array {
+      if let arr = json[Key.ops].array {
          ops = []
          for jsonOp in arr {
             ops?.append(Operation(fromJSON: jsonOp))
          }
       }
       
-      if let mat = json[Key.operations].array,
+      if let mat = json[Key.pMat].array,
          mat.count > 0 {
          pMat = [[]]
          for arr in mat {
@@ -71,6 +73,10 @@ class Operation: APIEntity {
          json[Key.h] = h
       }
       
+      if let reverse = reverse {
+         json[Key.reverse] = reverse
+      }
+      
       if let pMat = pMat,
          pMat.count > 0 {
          var pMatAll: [NSMutableArray] = []
@@ -82,7 +88,8 @@ class Operation: APIEntity {
          json[Key.pMat] = pMatAll
       }
       
-      if let ops = ops {
+      if let ops = ops,
+         ops.count > 0 {
          json[Key.ops] = JSONHelper.toJsonArray(fromArray: ops)
       }
       
