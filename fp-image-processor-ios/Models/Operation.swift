@@ -86,6 +86,8 @@ class Operation: APIEntity {
          }
          
          json[Key.pMat] = pMatAll
+      } else if name == Key.Operation.mediana {
+         json[Key.pMat] = []
       }
       
       if let ops = ops,
