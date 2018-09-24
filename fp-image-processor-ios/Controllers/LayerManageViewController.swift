@@ -40,6 +40,12 @@ class LayerManageViewController: UIViewController {
       txtAlpha.delegate = self
    }
    
+   override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      
+      tableView.reloadData()
+   }
+   
    
    // MARK: - Navigation
    
