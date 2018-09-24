@@ -36,19 +36,21 @@ struct Key {
    static let reverse = "reverse"
    
    struct Operation {
+      static let abs = "abs"
       static let add = "add"
-      static let sub = "sub"
-      static let invsub = "invsub"
-      static let mul = "mul"
       static let div = "div"
-      static let invdiv = "invdiv"
-      static let inv = "inv"
       static let greyscale = "greyscale"
-      static let pow = "pow"
+      static let inv = "inv"
+      static let invdiv = "invdiv"
+      static let invsub = "invsub"
       static let log = "log"
+      static let max = "max"
       static let mediana = "mediana"
+      static let min = "min"
+      static let mul = "mul"
       static let ponder = "ponder"
+      static let pow = "pow"
+      static let sub = "sub"
       static let composite = "composite"
-      static let chained = "chained"
    }
 }

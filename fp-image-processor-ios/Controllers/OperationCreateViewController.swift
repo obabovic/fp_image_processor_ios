@@ -37,7 +37,15 @@ class OperationCreateViewController: UIViewController {
       
       // Setup pickoption
       
-      pickOptions = [Key.Operation.add, Key.Operation.sub, Key.Operation.invsub, Key.Operation.inv, Key.Operation.mul, Key.Operation.div, Key.Operation.invdiv, Key.Operation.pow, Key.Operation.log, Key.Operation.greyscale, Key.Operation.mediana, Key.Operation.ponder, Key.Operation.composite]
+      pickOptions = [
+         Key.Operation.greyscale, Key.Operation.mediana,
+         Key.Operation.ponder, Key.Operation.composite,
+         Key.Operation.abs, Key.Operation.add,
+         Key.Operation.sub, Key.Operation.invsub,
+         Key.Operation.inv, Key.Operation.mul,
+         Key.Operation.div, Key.Operation.invdiv,
+         Key.Operation.max, Key.Operation.min,
+         Key.Operation.pow, Key.Operation.log]
       
       let pickerView = UIPickerView()
       
