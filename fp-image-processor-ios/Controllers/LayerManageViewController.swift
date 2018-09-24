@@ -15,7 +15,7 @@ class LayerManageViewController: UIViewController {
    
    @IBOutlet weak var lblId: UILabel!
    @IBOutlet weak var lblImg: UILabel!
-   @IBOutlet weak var lblAlpha: UILabel!
+   @IBOutlet weak var txtAlpha: UITextField!
    @IBOutlet weak var switchActive: UISwitch!
    @IBOutlet weak var tableView: UITableView!
    
@@ -33,9 +33,11 @@ class LayerManageViewController: UIViewController {
          let selectionz = layer.selections {
          selections = selectionz
          switchActive.isOn = layer.active ?? true
-         lblAlpha.text = "\(layer.alpha ?? 1.0)"
+         txtAlpha.text = "\(layer.alpha ?? 1.0)"
          lblId.text = "\(layer.id ?? 0)"
       }
+      
+      txtAlpha.delegate = self
    }
    
    
@@ -57,6 +59,19 @@ class LayerManageViewController: UIViewController {
    }
 }
 
+
+// MARK: - UITextFieldDelegate
+
+extension LayerManageViewController: UITextFieldDelegate {
+   func textFieldDidEndEditing(_ textField: UITextField) {
+      if textField == txtAlpha,
+         txtAlpha.text != "" {
+         layer?.alpha = Float(txtAlpha.text ?? "1")
+      }
+      
+      resignFirstResponder()
+   }
+}
 
 
 // MARK: - UITableViewDelegate
