@@ -21,6 +21,10 @@ class OperationCreateViewController: UIViewController {
    @IBOutlet weak var txtH: UITextField!
    @IBOutlet weak var txtMatrix: UITextView!
    @IBOutlet weak var switchReverse: UISwitch!
+   @IBOutlet weak var lblArithmeticOptions: UILabel!
+   @IBOutlet weak var lblFilterOptions: UILabel!
+   @IBOutlet weak var lblReverse: UILabel!
+   @IBOutlet weak var lblPonderOptions: UILabel!
    
    var pickOptions: [String]!
    var selectedOperations: [Operation] = []
@@ -54,6 +58,23 @@ class OperationCreateViewController: UIViewController {
       txtName.inputView = pickerView
       txtName.text = pickOptions[0]
       txtOperations.delegate = self
+      
+      txtMatrix.layer.borderWidth = 1.0
+      txtMatrix.layer.cornerRadius = 8.0
+      txtMatrix.layer.borderColor = #colorLiteral(red: 0.9005706906, green: 0.9012550712, blue: 0.9006766677, alpha: 1).cgColor
+      
+      txtR.isHidden = true
+      txtG.isHidden = true
+      txtB.isHidden = true
+      txtOperations.isHidden = true
+      lblArithmeticOptions.isHidden = true
+      lblFilterOptions.isHidden = true
+      txtW.isHidden = true
+      txtH.isHidden = true
+      lblReverse.isHidden = true
+      switchReverse.isHidden = true
+      lblPonderOptions.isHidden = true
+      txtMatrix.isHidden = true
    }
    
    
@@ -211,6 +232,69 @@ extension OperationCreateViewController: UIPickerViewDataSource {
    
    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
       txtName.text = pickOptions[row]
+      
+      switch pickOptions[row] {
+      case Key.Operation.abs, Key.Operation.add, Key.Operation.sub, Key.Operation.invsub, Key.Operation.div, Key.Operation.invdiv, Key.Operation.mul, Key.Operation.max, Key.Operation.min, Key.Operation.pow:
+         txtR.isHidden = false
+         txtG.isHidden = false
+         txtB.isHidden = false
+         txtOperations.isHidden = true
+         lblArithmeticOptions.isHidden = false
+         lblFilterOptions.isHidden = true
+         txtW.isHidden = true
+         txtH.isHidden = true
+         lblReverse.isHidden = true
+         switchReverse.isHidden = true
+         lblPonderOptions.isHidden = true
+         txtMatrix.isHidden = true
+      case Key.Operation.inv, Key.Operation.greyscale, Key.Operation.log:
+         txtR.isHidden = true
+         txtG.isHidden = true
+         txtB.isHidden = true
+         lblArithmeticOptions.isHidden = true
+         txtOperations.isHidden = true
+         lblFilterOptions.isHidden = true
+         txtW.isHidden = true
+         txtH.isHidden = true
+         lblReverse.isHidden = true
+         switchReverse.isHidden = true
+         lblPonderOptions.isHidden = true
+         txtMatrix.isHidden = true
+      case Key.Operation.mediana, Key.Operation.ponder:
+         txtR.isHidden = true
+         txtG.isHidden = true
+         txtB.isHidden = true
+         lblArithmeticOptions.isHidden = true
+         txtOperations.isHidden = true
+         lblFilterOptions.isHidden = false
+         txtW.isHidden = false
+         txtH.isHidden = false
+         lblReverse.isHidden = true
+         switchReverse.isHidden = true
+         
+         if pickOptions[row] == Key.Operation.ponder {
+            lblPonderOptions.isHidden = false
+            txtMatrix.isHidden = false
+         } else {
+            lblPonderOptions.isHidden = true
+            txtMatrix.isHidden = true
+         }
+      case Key.Operation.composite:
+         txtR.isHidden = true
+         txtG.isHidden = true
+         txtB.isHidden = true
+         txtOperations.isHidden = false
+         lblArithmeticOptions.isHidden = true
+         lblFilterOptions.isHidden = true
+         txtW.isHidden = true
+         txtH.isHidden = true
+         lblReverse.isHidden = false
+         switchReverse.isHidden = false
+         lblPonderOptions.isHidden = true
+         txtMatrix.isHidden = true
+      default:
+         break
+      }
    }
 }
 
