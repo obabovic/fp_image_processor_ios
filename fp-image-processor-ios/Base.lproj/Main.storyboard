@@ -927,7 +927,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tuP-sk-7Sl">
-                                <rect key="frame" x="0.0" y="283" width="375" height="384"/>
+                                <rect key="frame" x="0.0" y="299" width="375" height="368"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -942,7 +942,7 @@
                             <constraint firstItem="I8U-cr-D7Z" firstAttribute="trailing" secondItem="vef-fq-dCm" secondAttribute="trailing" constant="16" id="jmC-n0-hXq"/>
                             <constraint firstItem="tuP-sk-7Sl" firstAttribute="leading" secondItem="I8U-cr-D7Z" secondAttribute="leading" id="s0S-Pl-S3M"/>
                             <constraint firstItem="vef-fq-dCm" firstAttribute="leading" secondItem="I8U-cr-D7Z" secondAttribute="leading" constant="16" id="tTd-Me-qMS"/>
-                            <constraint firstItem="tuP-sk-7Sl" firstAttribute="top" secondItem="vef-fq-dCm" secondAttribute="bottom" id="vJl-qc-0Y1"/>
+                            <constraint firstItem="tuP-sk-7Sl" firstAttribute="top" secondItem="vef-fq-dCm" secondAttribute="bottom" constant="16" id="vJl-qc-0Y1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I8U-cr-D7Z"/>
                     </view>

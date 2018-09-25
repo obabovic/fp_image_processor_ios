@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 enum Router: URLRequestConvertible {
+//   static let baseURL: URL! = URL(string: "http://192.168.0.55:9000")
    static let baseURL: URL! = URL(string: "http://localhost:9000")
    static let baseAssetsURL: URL! = baseURL.appendingPathComponent("assets")
    var formedURL: URL { return Router.baseURL.appendingPathComponent(route.path) }
